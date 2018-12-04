@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@list');
+
+Route::get('/msg/{id}', 'HomeController@detail');
+
+Route::post('/create', 'MessagesController@create');
